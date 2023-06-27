@@ -1,0 +1,78 @@
+body {
+    background-color: rgb(237, 238, 240);
+}
+
+.gallery-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.border {
+    margin: 40px auto;
+    width: 40%;
+    border-color: green !important;
+    /*  This is my comment  */
+}
+
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+
+}
+
+.gallery .gallery-image-link{
+    /* <a> tag */
+    flex: 10%;
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: 80%;
+    transition: 1.5s;
+}
+
+.gallery .gallery-image-link:hover{
+    transform: scale(1.1);
+    opacity: 100%;
+
+}
+.gallery .gallery-image-link img {
+    filter: grayscale(100%);
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+
+}
+
+.gallery .gallery-image-link:hover img{
+    filter: grayscale(0%)
+}
+
+.inner-width {
+    max-width: 960px;
+    margin: auto;
+    padding: 0px 20px; /* top bottom left/right */
+    width: 100%;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 960px){
+    .gallery .gallery-image-link{
+        flex: 33.33%;
+
+    }
+}
+
+/* Media Query */
+
+@media screen and (max-width: 600px){
+    .gallery .gallery-image-link{
+        flex: 100%;
+    }
+    .gallery .gallery-image-link img{
+        width: 100%;
+    }
+}
